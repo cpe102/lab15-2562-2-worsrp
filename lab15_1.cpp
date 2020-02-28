@@ -38,7 +38,7 @@ void showData(double *dPtr,int N,int M){
 	for(int i=0;i<N;i++){
 		for(int j=0;j<M;j++){
 			cout << fixed << setprecision(2);
-			cout << *(dPtr+i+(j*7)) << " ";
+			cout << *(dPtr+(i*7)+j) << " ";
 		}
 		cout << "\n";
 	}

@@ -38,7 +38,7 @@ void showData(double *dPtr,int N,int M){
 	for(int i=0;i<N;i++){
 		for(int j=0;j<M;j++){
 			cout << fixed << setprecision(2);
-			cout << *(dPtr+(i*7)+j) << " ";
+			cout << *(dPtr+(i*N)+j) << " ";
 		}
 		cout << "\n";
 	}
@@ -48,7 +48,7 @@ void findColSum(const double *dPtr,double *result,int N,int M){
 	double sum=0;
 	for(int i=0;i<N;i++){
 		for(int j=0;j<M;j++){
-			sum+=*(dPtr+i+(j*7));
+			sum+=*(dPtr+i+(j*N));
 		}
 		result[i]=sum;
 		sum=0;
